@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import  { useRef } from 'react'
 import './Auth.css'
 import RegisterCard from './Register/RegisterCard';
 import LoginCard from './Login/LoginCard';
@@ -15,7 +15,7 @@ function toggleContainer():void {
     <div ref={containerRef} className="container">
 
             <LoginCard/>
-            <RegisterCard/>
+            <RegisterCard toggleContainer={toggleContainer}/>
 
     <div className="toggle-box">
         <div className="toggle-panel toggle-left">

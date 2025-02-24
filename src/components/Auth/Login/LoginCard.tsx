@@ -3,8 +3,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { authClient } from "../../../lib/auth/client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginCard() {
+  const navigate=useNavigate()
   const [isPending, setIsPending] = React.useState<boolean>(false);
 
   const validationSchema = Yup.object({
@@ -52,9 +54,10 @@ export default function LoginCard() {
           progress: undefined,
           theme: "light",
         });
+        navigate("/application");
     }
 
-
+    
     // Refresh the auth state
     // router.replace("/");
     // router.refresh();

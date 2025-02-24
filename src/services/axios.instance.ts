@@ -5,7 +5,6 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from "axios";
 
-import { paths } from "../types/paths";
 
 
 // Function to get token from localStorage
@@ -41,7 +40,7 @@ axiosInstance.interceptors.request.use(
 const redirectToSignIn = () => {
   if (typeof window !== "undefined") {
     window.localStorage.removeItem("custom-auth-token");
-    window.location.href = paths.auth.signIn;
+    window.location.href = '/';
   }
 };
 

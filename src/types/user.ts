@@ -6,13 +6,6 @@ export interface User {
   email?: string | undefined;
 }
 
-export interface AllUsers {
-  pageLength: number;
-  page: number;
-  pages: number;
-  count: number;
-  users: User[];
-}
 
 export interface LoggedInUser {
   name: string;
